@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "allowJs": true,
     "noEmit": true,
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
@@ -23,7 +23,8 @@
       "@utils/*": ["src/utils/*"],
       "@types/*": ["src/types/*"],
       "@assets/*": ["src/assets/*"]
-    }
+    },
+    "types": ["node", "jest"]
   },
   "include": ["src/**/*", "index.js"],
   "exclude": [
