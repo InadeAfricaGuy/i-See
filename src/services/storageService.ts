@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { STORAGE_KEYS } from '../utils/constants';
+import { User } from '../types';
 
 /**
  * Storage service for persisting data locally
@@ -44,7 +45,7 @@ export const storageService = {
   /**
    * Save user data
    */
-  saveUserData: async (userData: any): Promise<void> => {
+  saveUserData: async (userData: User): Promise<void> => {
     try {
       await AsyncStorage.setItem(STORAGE_KEYS.USER_DATA, JSON.stringify(userData));
     } catch (error) {
@@ -56,7 +57,7 @@ export const storageService = {
   /**
    * Get user data
    */
-  getUserData: async (): Promise<any | null> => {
+  getUserData: async (): Promise<User | null> => {
     try {
       const data = await AsyncStorage.getItem(STORAGE_KEYS.USER_DATA);
       return data ? JSON.parse(data) : null;

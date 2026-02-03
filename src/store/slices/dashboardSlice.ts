@@ -1,23 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-export interface RealTimeData {
-  timestamp: Date;
-  solarPower: number; // kW
-  batteryCharge: number; // %
-  gridPower: number; // kW
-  consumption: number; // kW
-}
-
-export interface DashboardStats {
-  todayProduction: number; // kWh
-  monthProduction: number; // kWh
-  lifetimeProduction: number; // kWh
-  co2Saved: number; // kg
-}
+import { RealTimeData, EnergyStats } from '../../types';
 
 export interface DashboardState {
   realTimeData: RealTimeData | null;
-  stats: DashboardStats | null;
+  stats: EnergyStats | null;
   isLoading: boolean;
   error: string | null;
 }
@@ -45,7 +31,7 @@ const dashboardSlice = createSlice({
       state.realTimeData = action.payload;
       state.isLoading = false;
     },
-    updateStats: (state, action: PayloadAction<DashboardStats>) => {
+    updateStats: (state, action: PayloadAction<EnergyStats>) => {
       state.stats = action.payload;
       state.isLoading = false;
     },

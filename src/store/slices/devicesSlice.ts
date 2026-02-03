@@ -1,19 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-export interface Device {
-  id: string;
-  type: 'inverter' | 'battery' | 'solar' | 'meter';
-  name: string;
-  status: 'online' | 'offline' | 'error';
-  lastSeen: Date;
-}
-
-export interface Installation {
-  id: string;
-  name: string;
-  location: string;
-  devices: Device[];
-}
+import { Device, Installation } from '../../types';
 
 export interface DevicesState {
   installations: Installation[];
