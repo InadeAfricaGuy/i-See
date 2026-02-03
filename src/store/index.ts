@@ -17,7 +17,9 @@ export const store = configureStore({
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
-        // Ignore these action types for date objects
+        // Ignore date serialization warnings for real-time data updates
+        // RealTimeData contains Date objects which are intentionally non-serializable
+        // as they are regularly refreshed from the server
         ignoredActions: ['dashboard/updateRealTimeData'],
       },
     }),
