@@ -7,13 +7,7 @@ import MonitoringScreen from '../screens/monitoring/MonitoringScreen';
 import AnalyticsScreen from '../screens/analytics/AnalyticsScreen';
 import SettingsScreen from '../screens/settings/SettingsScreen';
 import { theme } from '../utils/theme';
-
-export type MainTabParamList = {
-  Dashboard: undefined;
-  Monitoring: undefined;
-  Analytics: undefined;
-  Settings: undefined;
-};
+import { MainTabParamList } from '../types/navigation';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
 
