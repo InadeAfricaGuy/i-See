@@ -1,0 +1,58 @@
+name: iOS Build
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build iOS
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install CocoaPods dependencies
+        run: |
+          cd ios
+          pod install
+      
+      - name: Run tests
+        run: npm test
+      
+      - name: Build iOS Archive
+        run: |
+          cd ios
+          xcodebuild \
+            -workspace iSee.xcworkspace \
+            -scheme iSee \
+            -configuration Release \
+            -archivePath $PWD/build/iSee.xcarchive \
+            archive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+      
+      - name: Upload iOS Archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-archive
+          path: ios/build/iSee.xcarchive
+          retention-days: 30
+
+  # Note: For actual App Store deployment, you'll need to:
+  # 1. Set up code signing certificates and provisioning profiles
+  # 2. Configure fastlane for automated deployment
+  # 3. Add secrets: APPLE_ID, APP_STORE_CONNECT_API_KEY, etc.
