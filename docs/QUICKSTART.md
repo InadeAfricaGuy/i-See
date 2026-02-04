@@ -414,4 +414,4 @@ Use this checklist to track Phase 1 progress:
 
 **Ready to start? Pick a task from Phase 1 in ROADMAP.md and begin coding!**
 
-For detailed implementation instructions, see [IMPLEMENTATION.md](./IMPLEMENTATION.md).
+For detailed implementation instructions, see [IMPLEMENTATION.md](IMPLEMENTATION.md).

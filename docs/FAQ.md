@@ -25,7 +25,7 @@
 - **Team expertise**: Easier to find JavaScript/TypeScript developers
 - **Performance**: Sufficient for our use case
 
-For more details, see [ARCHITECTURE.md - Technology Stack](./ARCHITECTURE.md#technology-stack).
+For more details, see [ARCHITECTURE.md - Technology Stack](ARCHITECTURE.md#technology-stack).
 
 ### Q: Why not Flutter?
 
@@ -35,7 +35,7 @@ For more details, see [ARCHITECTURE.md - Technology Stack](./ARCHITECTURE.md#tec
 - Easier web version development in future (React Native Web)
 - Team familiarity with JavaScript/TypeScript
 
-However, the architecture supports Flutter implementation with minimal changes. See [IMPLEMENTATION.md - Flutter Setup](./IMPLEMENTATION.md#flutter-setup-alternative).
+However, the architecture supports Flutter implementation with minimal changes. See [IMPLEMENTATION.md - Flutter Setup](IMPLEMENTATION.md#flutter-setup-alternative).
 
 ### Q: What backend technology should we use?
 
@@ -44,7 +44,7 @@ However, the architecture supports Flutter implementation with minimal changes. 
 - **Python** (FastAPI/Django) - Great for data processing and ML
 - **Go** - Excellent performance for real-time features
 
-See [API_SPEC.md](./API_SPEC.md) for complete API requirements.
+See [API_SPEC.md](API_SPEC.md) for complete API requirements.
 
 ### Q: How does real-time data work?
 
@@ -54,7 +54,7 @@ See [API_SPEC.md](./API_SPEC.md) for complete API requirements.
 3. Updates received in real-time (typically < 5 seconds latency)
 4. Fallback to HTTP polling if WebSocket unavailable
 
-See [ARCHITECTURE.md - Real-time Communication](./ARCHITECTURE.md#real-time-communication) for details.
+See [ARCHITECTURE.md - Real-time Communication](ARCHITECTURE.md#real-time-communication) for details.
 
 ### Q: How is user data secured?
 
@@ -65,7 +65,7 @@ See [ARCHITECTURE.md - Real-time Communication](./ARCHITECTURE.md#real-time-comm
 - **API**: Rate limiting and validation
 - **Code**: Obfuscation and root/jailbreak detection
 
-See [SECURITY.md](./SECURITY.md) for comprehensive security guidelines.
+See [SECURITY.md](SECURITY.md) for comprehensive security guidelines.
 
 ## Development Questions
 

@@ -547,9 +547,9 @@ This is an accelerated 2-week roadmap to deliver a working MVP of the i-See mobi
 ## Implementation Guide
 
 For detailed implementation instructions, see:
-- **[IMPLEMENTATION_2WEEK.md](./IMPLEMENTATION_2WEEK.md)** - Complete 2-week guide with code examples
-- **[IMPLEMENTATION.md](./IMPLEMENTATION.md)** - Original 22-week guide (for reference)
-- **[ROADMAP.md](./ROADMAP.md)** - Original 22-week roadmap (for reference)
+- **[IMPLEMENTATION_2WEEK.md](IMPLEMENTATION_2WEEK.md)** - Complete 2-week guide with code examples
+- **[IMPLEMENTATION.md](IMPLEMENTATION.md)** - Original 22-week guide (for reference)
+- **[ROADMAP.md](ROADMAP.md)** - Original 22-week roadmap (for reference)
 
 ---
 
