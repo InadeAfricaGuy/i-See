@@ -184,20 +184,20 @@ Add 4 more weeks:
 ## Next Steps
 
 ### Option A: Start 2-Week MVP Immediately
-1. Review [IMPLEMENTATION_2WEEK.md](./IMPLEMENTATION_2WEEK.md)
+1. Review [IMPLEMENTATION_2WEEK.md](IMPLEMENTATION_2WEEK.md)
 2. Allocate 1-2 developers
 3. Start Day 1 setup
 4. Deploy MVP in 14 days
 
 ### Option B: Plan 6-Week Hybrid (Recommended)
-1. Review [COMPARISON.md](./COMPARISON.md)
+1. Review [COMPARISON.md](COMPARISON.md)
 2. Allocate development team
 3. Week 1-2: MVP
 4. Week 3-6: Production hardening
 5. Deploy beta-ready app in 6 weeks
 
 ### Option C: Full 22-Week Implementation
-1. Review [IMPLEMENTATION.md](./IMPLEMENTATION.md)
+1. Review [IMPLEMENTATION.md](IMPLEMENTATION.md)
 2. Allocate full team (6 people)
 3. Follow 7-phase roadmap
 4. Deploy production app in 22 weeks
@@ -207,21 +207,21 @@ Add 4 more weeks:
 ## Documentation Guide
 
 **Start Here**:
-1. **[COMPARISON.md](./COMPARISON.md)** - Compare 2-week vs 22-week approaches
+1. **[COMPARISON.md](COMPARISON.md)** - Compare 2-week vs 22-week approaches
 2. Choose your timeline based on budget and needs
 
 **For 2-Week Approach**:
-3. **[IMPLEMENTATION_2WEEK.md](./IMPLEMENTATION_2WEEK.md)** - Complete implementation guide
-4. **[ROADMAP_2WEEK.md](./ROADMAP_2WEEK.md)** - Daily breakdown
+3. **[IMPLEMENTATION_2WEEK.md](IMPLEMENTATION_2WEEK.md)** - Complete implementation guide
+4. **[ROADMAP_2WEEK.md](ROADMAP_2WEEK.md)** - Daily breakdown
 
 **For 22-Week Approach**:
-3. **[IMPLEMENTATION.md](./IMPLEMENTATION.md)** - Full implementation guide
-4. **[ROADMAP.md](./ROADMAP.md)** - Phase-by-phase roadmap
+3. **[IMPLEMENTATION.md](IMPLEMENTATION.md)** - Full implementation guide
+4. **[ROADMAP.md](ROADMAP.md)** - Phase-by-phase roadmap
 
 **Reference**:
-- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - System architecture
-- **[API_SPEC.md](./API_SPEC.md)** - API documentation
-- **[SECURITY.md](./SECURITY.md)** - Security guidelines
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture
+- **[API_SPEC.md](API_SPEC.md)** - API documentation
+- **[SECURITY.md](SECURITY.md)** - Security guidelines
 
 ---
 
@@ -248,11 +248,11 @@ Add 4 more weeks:
 
 ## Quick Links
 
-- 📊 [Full Comparison](./COMPARISON.md)
-- ⚡ [2-Week Implementation Guide](./IMPLEMENTATION_2WEEK.md)
-- 🗓️ [2-Week Roadmap](./ROADMAP_2WEEK.md)
-- 📚 [22-Week Implementation Guide](./IMPLEMENTATION.md)
-- 📅 [22-Week Roadmap](./ROADMAP.md)
+- 📊 [Full Comparison](COMPARISON.md)
+- ⚡ [2-Week Implementation Guide](IMPLEMENTATION_2WEEK.md)
+- 🗓️ [2-Week Roadmap](ROADMAP_2WEEK.md)
+- 📚 [22-Week Implementation Guide](IMPLEMENTATION.md)
+- 📅 [22-Week Roadmap](ROADMAP.md)
 
 ---
 
@@ -271,4 +271,4 @@ Add 4 more weeks:
 
 ---
 
-**Questions? Review [COMPARISON.md](./COMPARISON.md) for detailed analysis of all options.**
+**Questions? Review [COMPARISON.md](COMPARISON.md) for detailed analysis of all options.**

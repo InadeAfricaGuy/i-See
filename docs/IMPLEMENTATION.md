@@ -1102,7 +1102,7 @@ ENVFILE=.env.production npm run build:android
 
 ## Next Steps
 
-1. Review [ROADMAP.md](./ROADMAP.md) for development phases
+1. Review [ROADMAP.md](ROADMAP.md) for development phases
 2. Set up your development environment
 3. Start with Phase 1 implementation
 4. Follow the testing strategy for each module

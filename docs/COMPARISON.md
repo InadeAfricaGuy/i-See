@@ -524,11 +524,11 @@ This document compares two approaches to building the i-See mobile application:
 
 ## Reference Documents
 
-- **[IMPLEMENTATION_2WEEK.md](./IMPLEMENTATION_2WEEK.md)** - Detailed 2-week implementation guide
-- **[ROADMAP_2WEEK.md](./ROADMAP_2WEEK.md)** - 2-week sprint roadmap
-- **[IMPLEMENTATION.md](./IMPLEMENTATION.md)** - Original 22-week implementation guide
-- **[ROADMAP.md](./ROADMAP.md)** - Original 22-week roadmap
-- **[README.md](./README.md)** - Project overview
+- **[IMPLEMENTATION_2WEEK.md](IMPLEMENTATION_2WEEK.md)** - Detailed 2-week implementation guide
+- **[ROADMAP_2WEEK.md](ROADMAP_2WEEK.md)** - 2-week sprint roadmap
+- **[IMPLEMENTATION.md](IMPLEMENTATION.md)** - Original 22-week implementation guide
+- **[ROADMAP.md](ROADMAP.md)** - Original 22-week roadmap
+- **[README.md](../README.md)** - Project overview
 
 ---
 

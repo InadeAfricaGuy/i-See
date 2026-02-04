@@ -18,17 +18,17 @@ This repository contains **nearly 5,000 lines** of comprehensive documentation t
 
 | Document | Size | Purpose | Target Audience |
 |----------|------|---------|----------------|
-| [README.md](./README.md) | 7.9 KB | Project overview and quick reference | Everyone |
-| [ARCHITECTURE.md](./ARCHITECTURE.md) | 17 KB | System architecture and technical design | Architects, Developers |
-| [IMPLEMENTATION.md](./IMPLEMENTATION.md) | 28 KB | Step-by-step implementation guide | Developers |
-| [ROADMAP.md](./ROADMAP.md) | 14 KB | Development timeline and phases | Project Managers, Team Leads |
-| [API_SPEC.md](./API_SPEC.md) | 13 KB | Complete API specification | Backend Developers, API Consumers |
-| [SECURITY.md](./SECURITY.md) | 16 KB | Security guidelines and best practices | Security Team, Developers |
-| [CONTRIBUTING.md](./CONTRIBUTING.md) | 6.0 KB | Contribution guidelines | Contributors, Developers |
-| [QUICKSTART.md](./QUICKSTART.md) | 8.4 KB | Quick start for different roles | New Team Members |
-| [FAQ.md](./FAQ.md) | 13 KB | Frequently asked questions | Everyone |
-| [package.json](./package.json) | 3.3 KB | Project dependencies and scripts | Developers |
-| [LICENSE](./LICENSE) | 1.1 KB | MIT License | Legal, Open Source Users |
+| [README.md](../README.md) | 7.9 KB | Project overview and quick reference | Everyone |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | 17 KB | System architecture and technical design | Architects, Developers |
+| [IMPLEMENTATION.md](IMPLEMENTATION.md) | 28 KB | Step-by-step implementation guide | Developers |
+| [ROADMAP.md](ROADMAP.md) | 14 KB | Development timeline and phases | Project Managers, Team Leads |
+| [API_SPEC.md](API_SPEC.md) | 13 KB | Complete API specification | Backend Developers, API Consumers |
+| [SECURITY.md](SECURITY.md) | 16 KB | Security guidelines and best practices | Security Team, Developers |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | 6.0 KB | Contribution guidelines | Contributors, Developers |
+| [QUICKSTART.md](QUICKSTART.md) | 8.4 KB | Quick start for different roles | New Team Members |
+| [FAQ.md](FAQ.md) | 13 KB | Frequently asked questions | Everyone |
+| [package.json](../package.json) | 3.3 KB | Project dependencies and scripts | Developers |
+| [LICENSE](../LICENSE) | 1.1 KB | MIT License | Legal, Open Source Users |
 
 **Total Documentation**: ~100+ KB of detailed technical content
 
@@ -197,7 +197,7 @@ Week 21-22: Production Release ░░░░░░░░░░░░░░░░�
 ✅ **Protection**: Root/jailbreak detection, code obfuscation  
 ✅ **Monitoring**: Real-time security event tracking  
 
-See [SECURITY.md](./SECURITY.md) for complete security guide.
+See [SECURITY.md](SECURITY.md) for complete security guide.
 
 ---
 
@@ -222,24 +222,24 @@ See [SECURITY.md](./SECURITY.md) for complete security guide.
 ## 🚀 Getting Started
 
 ### For Developers
-1. Read [QUICKSTART.md](./QUICKSTART.md)
-2. Set up environment per [IMPLEMENTATION.md](./IMPLEMENTATION.md)
-3. Pick a Phase 1 task from [ROADMAP.md](./ROADMAP.md)
-4. Follow [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines
+1. Read [QUICKSTART.md](QUICKSTART.md)
+2. Set up environment per [IMPLEMENTATION.md](IMPLEMENTATION.md)
+3. Pick a Phase 1 task from [ROADMAP.md](ROADMAP.md)
+4. Follow [CONTRIBUTING.md](CONTRIBUTING.md) guidelines
 
 ### For Project Managers
-1. Review [ROADMAP.md](./ROADMAP.md) for timeline
-2. Check [ARCHITECTURE.md](./ARCHITECTURE.md) for technical decisions
-3. See [FAQ.md](./FAQ.md) for common questions
+1. Review [ROADMAP.md](ROADMAP.md) for timeline
+2. Check [ARCHITECTURE.md](ARCHITECTURE.md) for technical decisions
+3. See [FAQ.md](FAQ.md) for common questions
 
 ### For Designers
-1. Review feature requirements in [ARCHITECTURE.md](./ARCHITECTURE.md)
-2. Check [QUICKSTART.md](./QUICKSTART.md) for design deliverables
+1. Review feature requirements in [ARCHITECTURE.md](ARCHITECTURE.md)
+2. Check [QUICKSTART.md](QUICKSTART.md) for design deliverables
 3. Follow mobile design best practices
 
 ### For Backend Developers
-1. Read [API_SPEC.md](./API_SPEC.md) for API requirements
-2. Review [ARCHITECTURE.md](./ARCHITECTURE.md) for data models
+1. Read [API_SPEC.md](API_SPEC.md) for API requirements
+2. Review [ARCHITECTURE.md](ARCHITECTURE.md) for data models
 3. Implement authentication and real-time features first
 
 ---
@@ -265,7 +265,7 @@ See [SECURITY.md](./SECURITY.md) for complete security guide.
 
 ## 🤝 Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for:
 - Code of conduct
 - Development process
 - Pull request guidelines
@@ -285,7 +285,7 @@ We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see [LICENSE](./LICENSE) file.
+This project is licensed under the MIT License - see [LICENSE](../LICENSE) file.
 
 ---
 
@@ -313,15 +313,15 @@ This project is licensed under the MIT License - see [LICENSE](./LICENSE) file.
 
 | Document | Description |
 |----------|-------------|
-| [README.md](./README.md) | Project overview |
-| [ARCHITECTURE.md](./ARCHITECTURE.md) | System architecture |
-| [IMPLEMENTATION.md](./IMPLEMENTATION.md) | Implementation guide |
-| [ROADMAP.md](./ROADMAP.md) | Development roadmap |
-| [API_SPEC.md](./API_SPEC.md) | API specification |
-| [SECURITY.md](./SECURITY.md) | Security guide |
-| [CONTRIBUTING.md](./CONTRIBUTING.md) | Contribution guidelines |
-| [QUICKSTART.md](./QUICKSTART.md) | Quick start guide |
-| [FAQ.md](./FAQ.md) | Frequently asked questions |
+| [README.md](../README.md) | Project overview |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | System architecture |
+| [IMPLEMENTATION.md](IMPLEMENTATION.md) | Implementation guide |
+| [ROADMAP.md](ROADMAP.md) | Development roadmap |
+| [API_SPEC.md](API_SPEC.md) | API specification |
+| [SECURITY.md](SECURITY.md) | Security guide |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
+| [QUICKSTART.md](QUICKSTART.md) | Quick start guide |
+| [FAQ.md](FAQ.md) | Frequently asked questions |
 
 ---
 

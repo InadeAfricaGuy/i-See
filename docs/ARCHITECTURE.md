@@ -521,4 +521,4 @@ interface EnergyMetrics {
 ---
 
 ## Next Steps
-See [IMPLEMENTATION.md](./IMPLEMENTATION.md) for detailed implementation guide and [ROADMAP.md](./ROADMAP.md) for development phases.
+See [IMPLEMENTATION.md](IMPLEMENTATION.md) for detailed implementation guide and [ROADMAP.md](ROADMAP.md) for development phases.

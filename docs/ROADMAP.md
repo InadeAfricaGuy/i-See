@@ -508,4 +508,4 @@ This roadmap provides a structured approach to building the i-See mobile applica
 4. Begin Phase 1 implementation
 5. Schedule regular checkpoint meetings
 
-For detailed implementation guidance, refer to [IMPLEMENTATION.md](./IMPLEMENTATION.md).
+For detailed implementation guidance, refer to [IMPLEMENTATION.md](IMPLEMENTATION.md).

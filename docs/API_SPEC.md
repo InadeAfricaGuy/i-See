@@ -680,4 +680,4 @@ GET /installations?sort=-installedDate&filter[status]=active
 
 ---
 
-For implementation details, see [IMPLEMENTATION.md](./IMPLEMENTATION.md).
+For implementation details, see [IMPLEMENTATION.md](IMPLEMENTATION.md).
