@@ -80,7 +80,7 @@ See [SECURITY.md](SECURITY.md) for comprehensive security guidelines.
 - **Phase 6** (Weeks 18-20): Testing & QA
 - **Phase 7** (Weeks 21-22): Production Release
 
-See [ROADMAP.md](./ROADMAP.md) for detailed breakdown.
+See [ROADMAP.md](ROADMAP.md) for detailed breakdown.
 
 ### Q: What team size do we need?
 
@@ -92,15 +92,15 @@ See [ROADMAP.md](./ROADMAP.md) for detailed breakdown.
 - 1 QA Engineer (part-time)
 - 1 DevOps Engineer (part-time)
 
-See [ROADMAP.md - Resource Requirements](./ROADMAP.md#resource-requirements).
+See [ROADMAP.md - Resource Requirements](ROADMAP.md#resource-requirements).
 
 ### Q: Can I start developing now?
 
 **A:** The current repository contains architecture and documentation. To start development:
 1. Review all documentation
-2. Set up React Native project following [IMPLEMENTATION.md](./IMPLEMENTATION.md)
-3. Pick a Phase 1 task from [ROADMAP.md](./ROADMAP.md)
-4. Follow guidelines in [CONTRIBUTING.md](./CONTRIBUTING.md)
+2. Set up React Native project following [IMPLEMENTATION.md](IMPLEMENTATION.md)
+3. Pick a Phase 1 task from [ROADMAP.md](ROADMAP.md)
+4. Follow guidelines in [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Q: What are the main dependencies?
 
@@ -114,12 +114,12 @@ See [ROADMAP.md - Resource Requirements](./ROADMAP.md#resource-requirements).
 - Socket.io/MQTT.js (real-time)
 - Firebase (auth, notifications, analytics)
 
-See [package.json](./package.json) for complete list.
+See [package.json](../package.json) for complete list.
 
 ### Q: How do I contribute?
 
 **A:** Follow these steps:
-1. Read [CONTRIBUTING.md](./CONTRIBUTING.md)
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md)
 2. Fork the repository
 3. Create a feature branch
 4. Make your changes
@@ -149,7 +149,7 @@ See [package.json](./package.json) for complete list.
 - Dark mode (Phase 5)
 - Predictive maintenance (Post-launch)
 
-See [ROADMAP.md - Version Planning](./ROADMAP.md#version-planning).
+See [ROADMAP.md - Version Planning](ROADMAP.md#version-planning).
 
 ### Q: Can users monitor multiple installations?
 
@@ -163,7 +163,7 @@ See [ROADMAP.md - Version Planning](./ROADMAP.md#version-planning).
 - Queue actions to sync when back online
 - Display clear offline indicators
 
-See [ARCHITECTURE.md - Offline Support](./ARCHITECTURE.md#offline-support).
+See [ARCHITECTURE.md - Offline Support](ARCHITECTURE.md#offline-support).
 
 ### Q: Can installations be shared with other users?
 
@@ -183,7 +183,7 @@ See [ARCHITECTURE.md - Offline Support](./ARCHITECTURE.md#offline-support).
 - Pagination for lists
 - WebSocket/MQTT for real-time updates
 
-See [API_SPEC.md](./API_SPEC.md) for complete specification.
+See [API_SPEC.md](API_SPEC.md) for complete specification.
 
 ### Q: What's the API rate limit?
 
@@ -192,7 +192,7 @@ See [API_SPEC.md](./API_SPEC.md) for complete specification.
 - 60 requests/hour for unauthenticated requests
 - 100 requests/minute for real-time data
 
-See [API_SPEC.md - Rate Limiting](./API_SPEC.md#rate-limiting).
+See [API_SPEC.md - Rate Limiting](API_SPEC.md#rate-limiting).
 
 ### Q: How do we handle different device manufacturers?
 
@@ -225,7 +225,7 @@ Integration points are defined in the API layer.
 - Real-time latency: < 5 seconds
 - Memory usage: < 100MB baseline
 
-See [ARCHITECTURE.md - Performance Metrics](./ARCHITECTURE.md#performance-metrics).
+See [ARCHITECTURE.md - Performance Metrics](ARCHITECTURE.md#performance-metrics).
 
 ### Q: How many installations can one user have?
 
@@ -280,7 +280,7 @@ Each has separate .env files and API endpoints.
 4. **E2E tests**: Critical user journeys
 5. **Manual testing**: Device compatibility, UX
 
-See [IMPLEMENTATION.md - Testing Strategy](./IMPLEMENTATION.md#testing-strategy).
+See [IMPLEMENTATION.md - Testing Strategy](IMPLEMENTATION.md#testing-strategy).
 
 ### Q: Do we need physical devices for testing?
 
@@ -350,7 +350,7 @@ Note: Costs vary significantly by location and team composition.
 - Device information
 - App version
 
-See [CONTRIBUTING.md - Reporting Bugs](./CONTRIBUTING.md#reporting-bugs).
+See [CONTRIBUTING.md - Reporting Bugs](CONTRIBUTING.md#reporting-bugs).
 
 ### Q: How do I request a feature?
 
@@ -360,7 +360,7 @@ See [CONTRIBUTING.md - Reporting Bugs](./CONTRIBUTING.md#reporting-bugs).
 - Why it's valuable
 - Potential implementation approach
 
-See [CONTRIBUTING.md - Suggesting Enhancements](./CONTRIBUTING.md#suggesting-enhancements).
+See [CONTRIBUTING.md - Suggesting Enhancements](CONTRIBUTING.md#suggesting-enhancements).
 
 ## Compliance & Legal
 
@@ -373,7 +373,7 @@ See [CONTRIBUTING.md - Suggesting Enhancements](./CONTRIBUTING.md#suggesting-enh
 - Privacy policy acceptance
 - Data minimization
 
-See [SECURITY.md - GDPR Compliance](./SECURITY.md#gdpr-compliance).
+See [SECURITY.md - GDPR Compliance](SECURITY.md#gdpr-compliance).
 
 ### Q: What about data privacy?
 

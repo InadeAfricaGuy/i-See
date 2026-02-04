@@ -219,9 +219,9 @@ Add 4 more weeks:
 4. **[ROADMAP.md](ROADMAP.md)** - Phase-by-phase roadmap
 
 **Reference**:
-- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - System architecture
-- **[API_SPEC.md](./API_SPEC.md)** - API documentation
-- **[SECURITY.md](./SECURITY.md)** - Security guidelines
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture
+- **[API_SPEC.md](API_SPEC.md)** - API documentation
+- **[SECURITY.md](SECURITY.md)** - Security guidelines
 
 ---
 
@@ -248,11 +248,11 @@ Add 4 more weeks:
 
 ## Quick Links
 
-- 📊 [Full Comparison](./COMPARISON.md)
-- ⚡ [2-Week Implementation Guide](./IMPLEMENTATION_2WEEK.md)
-- 🗓️ [2-Week Roadmap](./ROADMAP_2WEEK.md)
-- 📚 [22-Week Implementation Guide](./IMPLEMENTATION.md)
-- 📅 [22-Week Roadmap](./ROADMAP.md)
+- 📊 [Full Comparison](COMPARISON.md)
+- ⚡ [2-Week Implementation Guide](IMPLEMENTATION_2WEEK.md)
+- 🗓️ [2-Week Roadmap](ROADMAP_2WEEK.md)
+- 📚 [22-Week Implementation Guide](IMPLEMENTATION.md)
+- 📅 [22-Week Roadmap](ROADMAP.md)
 
 ---
 
@@ -271,4 +271,4 @@ Add 4 more weeks:
 
 ---
 
-**Questions? Review [COMPARISON.md](./COMPARISON.md) for detailed analysis of all options.**
+**Questions? Review [COMPARISON.md](COMPARISON.md) for detailed analysis of all options.**
