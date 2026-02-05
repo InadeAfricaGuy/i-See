@@ -43,6 +43,42 @@ export const storageService = {
   },
 
   /**
+   * Save refresh token
+   */
+  saveRefreshToken: async (refreshToken: string): Promise<void> => {
+    try {
+      await AsyncStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, refreshToken);
+    } catch (error) {
+      console.error('Error saving refresh token:', error);
+      throw error;
+    }
+  },
+
+  /**
+   * Get refresh token
+   */
+  getRefreshToken: async (): Promise<string | null> => {
+    try {
+      return await AsyncStorage.getItem(STORAGE_KEYS.REFRESH_TOKEN);
+    } catch (error) {
+      console.error('Error getting refresh token:', error);
+      return null;
+    }
+  },
+
+  /**
+   * Remove refresh token
+   */
+  removeRefreshToken: async (): Promise<void> => {
+    try {
+      await AsyncStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
+    } catch (error) {
+      console.error('Error removing refresh token:', error);
+      throw error;
+    }
+  },
+
+  /**
    * Save user data
    */
   saveUserData: async (userData: User): Promise<void> => {
