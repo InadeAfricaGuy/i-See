@@ -29,7 +29,7 @@ const LoginScreen: React.FC = () => {
   const [passwordError, setPasswordError] = useState('');
 
   useEffect(() => {
-    // Clear any previous errors when component mounts
+    // Clear any previous errors when component unmounts
     return () => {
       dispatch(clearError());
     };

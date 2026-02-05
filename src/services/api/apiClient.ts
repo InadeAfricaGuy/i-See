@@ -2,6 +2,9 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { API_BASE_URL, API_TIMEOUT } from '../../utils/constants';
 import { storageService } from '../storageService';
 
+// Module-level constants
+const AUTH_REFRESH_ENDPOINT = '/auth/refresh';
+
 // Module-level state for token refresh to prevent race conditions across instances
 let isRefreshing = false;
 let refreshSubscribers: Array<(token: string) => void> = [];
@@ -45,7 +48,7 @@ class ApiClient {
         const originalRequest = error.config;
 
         // Skip retry for refresh endpoint to prevent infinite loop
-        if (originalRequest.url?.includes('/auth/refresh')) {
+        if (originalRequest.url === AUTH_REFRESH_ENDPOINT) {
           return Promise.reject(error);
         }
 
@@ -72,7 +75,7 @@ class ApiClient {
             }
 
             // Call refresh token endpoint using the same client
-            const response = await this.client.post('/auth/refresh', {
+            const response = await this.client.post(AUTH_REFRESH_ENDPOINT, {
               refreshToken,
             });
 

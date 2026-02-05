@@ -20,7 +20,8 @@ const ResetPasswordScreen: React.FC = () => {
   const route = useRoute<ResetPasswordRouteProp>();
   const { isLoading, error, passwordResetSuccess } = useAppSelector(state => state.auth);
 
-  const [token] = useState(route.params?.token || '');
+  // Token from route params (comes from deep link)
+  const token = route.params?.token || '';
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
