@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import { Text, Card, Title, List, Button } from 'react-native-paper';
 
 import { useAppDispatch, useAppSelector } from '../../store';
-import { logout } from '../../store/slices/authSlice';
+import { logoutThunk } from '../../store/thunks/authThunks';
 import { theme } from '../../utils/theme';
 
 /**
@@ -13,9 +13,10 @@ import { theme } from '../../utils/theme';
 const SettingsScreen: React.FC = () => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(state => state.auth.user);
+  const isLoading = useAppSelector(state => state.auth.isLoading);
 
   const handleLogout = () => {
-    dispatch(logout());
+    dispatch(logoutThunk());
   };
 
   return (
@@ -43,7 +44,12 @@ const SettingsScreen: React.FC = () => {
           </Card.Content>
         </Card>
 
-        <Button mode="contained" onPress={handleLogout} style={styles.logoutButton}>
+        <Button 
+          mode="contained" 
+          onPress={handleLogout} 
+          style={styles.logoutButton}
+          loading={isLoading}
+          disabled={isLoading}>
           Logout
         </Button>
       </View>

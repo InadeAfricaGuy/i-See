@@ -18,6 +18,7 @@ export const DEVICE_STATUS_INTERVAL = 60000; // 1 minute
 // Storage Keys
 export const STORAGE_KEYS = {
   AUTH_TOKEN: '@i-see/auth_token',
+  REFRESH_TOKEN: '@i-see/refresh_token',
   USER_DATA: '@i-see/user_data',
   SELECTED_INSTALLATION: '@i-see/selected_installation',
   THEME_PREFERENCE: '@i-see/theme_preference',

@@ -3,6 +3,8 @@ import authReducer, {
   loginSuccess,
   loginFailure,
   logout,
+  clearError,
+  clearPasswordResetFlags,
   AuthState,
 } from '../authSlice';
 import { User } from '../../../types';
@@ -11,9 +13,12 @@ describe('authSlice', () => {
   const initialState: AuthState = {
     user: null,
     token: null,
+    refreshToken: null,
     isAuthenticated: false,
     isLoading: false,
     error: null,
+    passwordResetSent: false,
+    passwordResetSuccess: false,
   };
 
   const mockUser: User = {
@@ -45,17 +50,19 @@ describe('authSlice', () => {
   });
 
   describe('loginSuccess', () => {
-    it('should set user and token on successful login', () => {
+    it('should set user, token, and refreshToken on successful login', () => {
       const token = 'test-token-123';
+      const refreshToken = 'test-refresh-token-123';
       const state = authReducer(
         initialState,
-        loginSuccess({ user: mockUser, token })
+        loginSuccess({ user: mockUser, token, refreshToken })
       );
 
       expect(state.isLoading).toBe(false);
       expect(state.isAuthenticated).toBe(true);
       expect(state.user).toEqual(mockUser);
       expect(state.token).toBe(token);
+      expect(state.refreshToken).toBe(refreshToken);
       expect(state.error).toBeNull();
     });
 
@@ -106,15 +113,19 @@ describe('authSlice', () => {
       const authenticatedState: AuthState = {
         user: mockUser,
         token: 'test-token-123',
+        refreshToken: 'test-refresh-token-123',
         isAuthenticated: true,
         isLoading: false,
         error: null,
+        passwordResetSent: false,
+        passwordResetSuccess: false,
       };
 
       const state = authReducer(authenticatedState, logout());
 
       expect(state.user).toBeNull();
       expect(state.token).toBeNull();
+      expect(state.refreshToken).toBeNull();
       expect(state.isAuthenticated).toBe(false);
       expect(state.error).toBeNull();
     });
@@ -123,6 +134,34 @@ describe('authSlice', () => {
       const state = authReducer(initialState, logout());
 
       expect(state).toEqual(initialState);
+    });
+  });
+
+  describe('clearError', () => {
+    it('should clear the error state', () => {
+      const previousState: AuthState = {
+        ...initialState,
+        error: 'Some error',
+      };
+
+      const state = authReducer(previousState, clearError());
+
+      expect(state.error).toBeNull();
+    });
+  });
+
+  describe('clearPasswordResetFlags', () => {
+    it('should clear password reset flags', () => {
+      const previousState: AuthState = {
+        ...initialState,
+        passwordResetSent: true,
+        passwordResetSuccess: true,
+      };
+
+      const state = authReducer(previousState, clearPasswordResetFlags());
+
+      expect(state.passwordResetSent).toBe(false);
+      expect(state.passwordResetSuccess).toBe(false);
     });
   });
 });

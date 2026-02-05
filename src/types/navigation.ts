@@ -10,6 +10,7 @@ import { RouteProp } from '@react-navigation/native';
 export type AuthStackParamList = {
   Login: undefined;
   ForgotPassword: undefined;
+  ResetPassword: { token?: string };
 };
 
 export type AuthNavigationProp = StackNavigationProp<AuthStackParamList>;
