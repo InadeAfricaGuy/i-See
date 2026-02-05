@@ -50,13 +50,9 @@ export const loginThunk = createAsyncThunk<
  * Logout thunk
  * Handles user logout and cleanup
  */
-export const logoutThunk = createAsyncThunk<
-  void,
-  void,
-  { rejectValue: string }
->(
+export const logoutThunk = createAsyncThunk<void, void>(
   'auth/logout',
-  async (_, { rejectWithValue }) => {
+  async () => {
     try {
       await authApi.logout();
     } catch (error: any) {

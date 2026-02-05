@@ -2,16 +2,20 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { API_BASE_URL, API_TIMEOUT } from '../../utils/constants';
 import { storageService } from '../storageService';
 
+// Module-level state for token refresh to prevent race conditions across instances
+let isRefreshing = false;
+let refreshSubscribers: Array<(token: string) => void> = [];
+
 /**
  * API Client service
  * Handles all HTTP requests to the backend API
+ * Implemented as singleton to ensure consistent token refresh behavior
  */
 class ApiClient {
+  private static instance: ApiClient;
   private client: AxiosInstance;
-  private isRefreshing = false;
-  private refreshSubscribers: Array<(token: string) => void> = [];
 
-  constructor() {
+  private constructor() {
     this.client = axios.create({
       baseURL: API_BASE_URL,
       timeout: API_TIMEOUT,
@@ -40,12 +44,17 @@ class ApiClient {
       async error => {
         const originalRequest = error.config;
 
+        // Skip retry for refresh endpoint to prevent infinite loop
+        if (originalRequest.url?.includes('/auth/refresh')) {
+          return Promise.reject(error);
+        }
+
         // If error is 401 and we haven't already tried to refresh
         if (error.response?.status === 401 && !originalRequest._retry) {
-          if (this.isRefreshing) {
+          if (isRefreshing) {
             // Wait for the refresh to complete
             return new Promise(resolve => {
-              this.refreshSubscribers.push((token: string) => {
+              refreshSubscribers.push((token: string) => {
                 originalRequest.headers.Authorization = `Bearer ${token}`;
                 resolve(this.client(originalRequest));
               });
@@ -53,7 +62,7 @@ class ApiClient {
           }
 
           originalRequest._retry = true;
-          this.isRefreshing = true;
+          isRefreshing = true;
 
           try {
             const refreshToken = await storageService.getRefreshToken();
@@ -62,8 +71,8 @@ class ApiClient {
               throw new Error('No refresh token available');
             }
 
-            // Call refresh token endpoint
-            const response = await axios.post(`${API_BASE_URL}/auth/refresh`, {
+            // Call refresh token endpoint using the same client
+            const response = await this.client.post('/auth/refresh', {
               refreshToken,
             });
 
@@ -77,10 +86,10 @@ class ApiClient {
             originalRequest.headers.Authorization = `Bearer ${newToken}`;
 
             // Retry all queued requests with new token
-            this.refreshSubscribers.forEach(callback => callback(newToken));
-            this.refreshSubscribers = [];
+            refreshSubscribers.forEach(callback => callback(newToken));
+            refreshSubscribers = [];
 
-            this.isRefreshing = false;
+            isRefreshing = false;
 
             // Retry the original request
             return this.client(originalRequest);
@@ -88,8 +97,8 @@ class ApiClient {
             // Refresh failed, clear tokens and logout user
             // Note: In production, this should trigger navigation to login screen
             // The app's navigation/auth context should listen for this state change
-            this.isRefreshing = false;
-            this.refreshSubscribers = [];
+            isRefreshing = false;
+            refreshSubscribers = [];
             await storageService.clearAll();
             
             return Promise.reject(refreshError);
@@ -113,6 +122,16 @@ class ApiClient {
     );
   }
 
+  /**
+   * Get singleton instance of ApiClient
+   */
+  public static getInstance(): ApiClient {
+    if (!ApiClient.instance) {
+      ApiClient.instance = new ApiClient();
+    }
+    return ApiClient.instance;
+  }
+
   async get<T>(url: string, config?: AxiosRequestConfig): Promise<T> {
     const response: AxiosResponse<T> = await this.client.get(url, config);
     return response.data;
@@ -134,4 +153,4 @@ class ApiClient {
   }
 }
 
-export const apiClient = new ApiClient();
+export const apiClient = ApiClient.getInstance();

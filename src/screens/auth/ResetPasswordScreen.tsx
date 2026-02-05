@@ -84,17 +84,12 @@ const ResetPasswordScreen: React.FC = () => {
       return;
     }
 
-    if (!token) {
-      // TODO: Token should be provided from email link via deep linking
-      // Deep linking implementation will be added in a future update
-      // See: https://reactnative.dev/docs/linking for implementation details
-      return;
-    }
-
     await dispatch(resetPasswordThunk({ token, newPassword }));
   };
 
   if (!token) {
+    // Token is required for password reset
+    // This UI is shown when the token is missing or invalid from the deep link
     return (
       <View style={styles.container}>
         <View style={styles.content}>
