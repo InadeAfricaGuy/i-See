@@ -85,8 +85,9 @@ const ResetPasswordScreen: React.FC = () => {
     }
 
     if (!token) {
-      // Token should be provided from email link
-      // In production, this would come from deep linking
+      // TODO: Token should be provided from email link via deep linking
+      // Deep linking implementation will be added in a future update
+      // See: https://reactnative.dev/docs/linking for implementation details
       return;
     }
 

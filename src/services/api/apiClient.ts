@@ -85,13 +85,13 @@ class ApiClient {
             // Retry the original request
             return this.client(originalRequest);
           } catch (refreshError) {
-            // Refresh failed, clear tokens and redirect to login
+            // Refresh failed, clear tokens and logout user
+            // Note: In production, this should trigger navigation to login screen
+            // The app's navigation/auth context should listen for this state change
             this.isRefreshing = false;
             this.refreshSubscribers = [];
             await storageService.clearAll();
             
-            // Dispatch logout event or navigate to login
-            // This would typically be handled by the app's navigation/auth context
             return Promise.reject(refreshError);
           }
         }

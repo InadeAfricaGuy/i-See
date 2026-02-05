@@ -123,7 +123,8 @@ export const autoLoginThunk = createAsyncThunk<
       }
       
       // Return stored data
-      // In a real app, you might want to verify the token with the server
+      // Note: In production, you would verify the token with the server
+      // For now, we trust the stored token until the backend API is available
       return {
         user: userData,
         token,
